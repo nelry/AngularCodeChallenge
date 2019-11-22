@@ -1,12 +1,32 @@
 <div style ="padding: 13px;">
-<form class="example-form">
-<mat-form-field style="margin-top: 10px;">
-	<input placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
-	<mat-autocomplete #auto = "matAutocomplete">
-	<mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-	{{option}}
-	</mat-option>
-	</mat-autocomplete>
-</mat-form-field>
-</form>
+<p>
+## AngularCodeChallenge
+<br>
+<br>
+Made by Niles Stanton.
+<br>
+<br>
+## Toolbar
+<br>
+<br>
+The toolbar at the top of the screen contains an instance of the star icon, for demo purposes. It also has two buttons: home and about, which allow navigation between their respective pages. The home page displays the project, and the about page has details about the components in the project.
+<br>
+<br>
+## Autocomplete
+<br>
+<br>
+Click on the autocomplete and select an option from the drop down or begin typing to narrow your search. The autocomplete will filter its options to those job titles that begin with a string matching the user input. When a job option is selected the autocomplete will automatically filter the list of job cards down to just that job.
+<br>
+<br>
+## Job Cards
+<br>
+<br>
+Each job card is headed with the title of the position. The Expansion Panel located on each card displays the location when closed and can be opened to display the description of the job. When the job is selected from the autocomplete component, the expansion panel automatically opens.
+<br>
+<br>
+## Styling
+<br>
+<br>
+The app was styled using two custom color palettes. One is a light-blue, while the other is a light-grey. They can both be found along with the custom theme in the styles.scss file.
+</p>
 </div>
