@@ -1,0 +1,12 @@
+<div style ="padding: 13px;">
+<form class="example-form">
+<mat-form-field style="margin-top: 10px;">
+	<input placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
+	<mat-autocomplete #auto = "matAutocomplete">
+	<mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+	{{option}}
+	</mat-option>
+	</mat-autocomplete>
+</mat-form-field>
+</form>
+</div>

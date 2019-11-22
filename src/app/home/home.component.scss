@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+@import '../../styles.scss';
+
+.extend-card{
+	background-color: mat-color($code-challenge-primary);
+}
+
+.extend-form{
+	padding: 15px;
+	background-color: mat-color($code-challenge-accent);
+	color: black;
+}
+
+.extend-background{
+	background-color: mat-color($code-challenge-accent);
+}
+
+.extend-list{
+	padding: 15px;
+	background-color: mat-color($code-challenge-accent);
+}

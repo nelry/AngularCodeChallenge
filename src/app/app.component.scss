@@ -1,0 +1,6 @@
+@import '~@angular/material/theming';
+@import '../styles.scss';
+
+.extend-toolbar{
+	background-color: mat-color($code-challenge-primary)
+}

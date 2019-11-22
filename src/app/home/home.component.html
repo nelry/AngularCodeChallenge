@@ -1,0 +1,27 @@
+<div style ="padding: 13px;" class="extend-background">
+	<form>
+	<mat-form-field style="margin-top: 10px;" class="extend-form">
+		<input placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
+		<mat-autocomplete #auto = "matAutocomplete" (optionSelected)="openPanel($event)">
+		<mat-option *ngFor="let product of filteredProducts | async" [value]="product.title">
+			{{product.title}}
+		</mat-option>
+		</mat-autocomplete>
+	</mat-form-field>
+	</form>
+	<mat-list class="extend-list">
+		<mat-card style="max-width: 600px; margin-top: 15px;" *ngFor= "let product of filteredProducts | async" class="extend-card">
+			<mat-card-header>
+				<mat-card-title>{{product.title}}</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<mat-expansion-panel [expanded]= "open">
+					<mat-expansion-panel-header>
+						Location: {{product.full_location}}
+					</mat-expansion-panel-header>
+					<p> {{product.description}}</p>
+				</mat-expansion-panel>
+			</mat-card-content>
+		</mat-card>
+	</mat-list>
+</div>
